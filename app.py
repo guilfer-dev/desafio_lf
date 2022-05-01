@@ -6,11 +6,11 @@ import time
 def main():
     charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     try:
-        number_of_lines = input(
-            'Please, enter the number of keys to be generated:\n')
+        number_of_lines = int(input(
+            'Please, enter the number of keys to be generated:\n'))
         t1 = time.time()
         with open('result_python.txt', 'w') as file:
-            for i in range(int(number_of_lines)):
+            for i in range(number_of_lines):
                 key = set()
                 while(len(key) < 7):
                     key.add(random.choice(charset))
